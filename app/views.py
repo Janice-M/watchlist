@@ -5,4 +5,6 @@ from app import app
 @app.route('/')
 def index ():
     """ this is a view root page that returns the index page and its data """
-    return render_template('index.html')
+    
+    message = 'Flask is running bois - Grey'
+    return render_template('index.html', message= message)
