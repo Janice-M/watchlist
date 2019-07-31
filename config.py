@@ -6,7 +6,12 @@ class Config:
     MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:**kwasync@localhost/watchlist'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    @staticmethod
+    def init_app(app):
+        pass
+    
 class ProdConfig(Config):
     pass
 
